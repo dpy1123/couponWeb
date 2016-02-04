@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			今日优惠
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-4 col-md-3" ng-repeat="data in list">
+					<div class="text-center">
+						<p>
+							{{data.article_title}} - {{data.article_price}}
+						</p>
+						
+						<p>
+							
+						{{data.top_category}} - 
+						{{data.article_mall}} - 
+						{{data.article_date_full}}-
+						{{data.article_worthy}}/{{data.article_unworthy}} - 
+						{{data.article_comment}}
+						</p>
+						<a href="comment/smzdm/{{data.article_id}}">评论</a>
+						<a href="{{data.article_link}}" ng-click="">购买</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

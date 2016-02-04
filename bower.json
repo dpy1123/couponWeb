@@ -1,0 +1,30 @@
+{
+  "name": "couponWeb",
+  "version": "0.0.1",
+  "description": "A web front for Coupon Project",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "coupon",
+    "web"
+  ],
+  "authors": [
+    "dd"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "angular-strap": "~2.3.1",
+    "bootstrap": "~3.3.5"
+  }
+}
