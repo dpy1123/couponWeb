@@ -20,7 +20,6 @@ app.controller('commentCtrl', ['$scope', '$routeParams', 'remoteServ', function(
 
 		promise.then(function (data) {  // 调用承诺API获取数据 .resolve
             $scope.list = data.data;
-            console.log($scope.list)
         }, function (data) {  // 处理错误 .reject
 
         });

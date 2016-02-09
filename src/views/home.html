@@ -21,8 +21,8 @@
 						{{data.article_worthy}}/{{data.article_unworthy}} - 
 						{{data.article_comment}}
 						</p>
-						<a href="comment/smzdm/{{data.article_id}}">评论</a>
-						<a href="{{data.article_link}}" ng-click="">购买</a>
+						<a href="comment/smzdm/{{data.article_id}}" ng-click="log(data.article_id, 'comment')" >评论</a>
+						<a href="{{data.article_link}}" ng-click="log(data.article_id, 'buy')">购买</a>
 					</div>
 				</div>
 			</div>

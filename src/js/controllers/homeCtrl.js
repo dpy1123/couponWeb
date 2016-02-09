@@ -14,7 +14,6 @@ app.controller('homeCtrl', ['$scope', 'remoteServ', function($scope, remoteServ)
 
 		promise.then(function (data) {  // 调用承诺API获取数据 .resolve
             $scope.list = data.data;
-            console.log($scope.list)
         }, function (data) {  // 处理错误 .reject
 
         });
@@ -22,4 +21,25 @@ app.controller('homeCtrl', ['$scope', 'remoteServ', function($scope, remoteServ)
         
     }
     list();
+    
+        
+    $scope.log = function(article_id, action){
+    	//console.log(action)
+    	var url = 'http://127.0.0.1:8877/v1/view_log/log';
+    	
+		var params = {
+			"user" : "dpy1123",
+			"article_id" : article_id,
+			"site" : "smzdm",
+			"action" : action
+		}
+		
+        var promise = remoteServ.httpGet(url, params);
+
+		promise.then(function (data) {  // 调用承诺API获取数据 .resolve
+            console.log(data);
+        }, function (data) {  // 处理错误 .reject
+
+        });
+    }
   }]);
